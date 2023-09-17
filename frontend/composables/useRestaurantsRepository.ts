@@ -9,7 +9,7 @@ export const useRestaurantsRepository = () => {
 
   async function getRestaurants() {
     const restaurantsDto = await httpGateway.get("/api/restaurants", {});
-    console.log(restaurantsDto.data.value.data);
+    console.log("TEST: ", restaurantsDto.data);
 
     const programmersModel = restaurantsDto.data.value.data.map(
       (restaurant) => {

@@ -9,6 +9,8 @@ export const useHttpGateway = () => {
       method: "get",
     });
 
+    // console.log("dto: ", dto);
+
     return dto;
   };
 

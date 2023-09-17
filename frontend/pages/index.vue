@@ -21,6 +21,4 @@ const presenter = useRestaurantsPresenter();
 await presenter.loadRestaurants();
 
 const viewModel = await presenter.getViewModel();
-
-console.log("VM: ", viewModel.restaurants);
 </script>
