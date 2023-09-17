@@ -11,5 +11,9 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.7.1"
+  },
+  "dependencies": {
+    "remark": "^14.0.3",
+    "remark-html": "^15.0.2"
   }
 }

@@ -16,7 +16,7 @@ export const useRestaurantsRepository = () => {
         return {
           id: restaurant.id,
           name: restaurant.attributes.Name,
-          description: restaurant.attributes.Description,
+          descriptionMarkdown: restaurant.attributes.Description,
           createdAt: restaurant.attributes.createdAt,
           publishedAt: restaurant.attributes.publishedAt,
           updatedAt: restaurant.attributes.updatedAt,

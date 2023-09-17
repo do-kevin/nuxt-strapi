@@ -6,9 +6,10 @@
         <h3>
           {{ restaurant.name }}
         </h3>
-        <p>
-          {{ restaurant.description }}
-        </p>
+        <section
+          v-if="restaurant.descriptionHtml"
+          v-html="restaurant.descriptionHtml"
+        ></section>
       </li>
     </ul>
   </article>
@@ -19,9 +20,7 @@ const presenter = useRestaurantsPresenter();
 
 await presenter.loadRestaurants();
 
-const viewModel = presenter.getViewModel();
+const viewModel = await presenter.getViewModel();
 
-// const result = await useFetch("http://localhost:1337/api/restaurants");
-
-// const restaurants = result.data.value.data;
+console.log("VM: ", viewModel.restaurants);
 </script>
