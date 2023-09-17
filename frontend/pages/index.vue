@@ -2,12 +2,12 @@
   <article>
     <h1>Restaurants</h1>
     <ul>
-      <li v-for="restaurant in restaurants">
+      <li v-for="restaurant in viewModel.restaurants">
         <h3>
-          {{ restaurant.attributes.Name }}
+          {{ restaurant.name }}
         </h3>
         <p>
-          {{ restaurant.attributes.Description }}
+          {{ restaurant.description }}
         </p>
       </li>
     </ul>
@@ -15,7 +15,13 @@
 </template>
 
 <script setup lang="ts">
-const result = await useFetch("http://localhost:1337/api/restaurants");
+const presenter = useRestaurantsPresenter();
 
-const restaurants = result.data.value.data;
+await presenter.loadRestaurants();
+
+const viewModel = presenter.getViewModel();
+
+// const result = await useFetch("http://localhost:1337/api/restaurants");
+
+// const restaurants = result.data.value.data;
 </script>
