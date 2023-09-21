@@ -7,5 +7,11 @@ export const useConfig = () => {
     applicationServerUrl: "http://localhost:1337",
   };
 
+  const runtimeConfig = useRuntimeConfig();
+
+  if (!!runtimeConfig.public.applicationServerUrl.length) {
+    config.applicationServerUrl = runtimeConfig.public.applicationServerUrl;
+  }
+
   return config;
 };
