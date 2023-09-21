@@ -1,24 +1,8 @@
 <template>
   <article>
-    <h1>Restaurants</h1>
-    <ul>
-      <li v-for="restaurant in viewModel.restaurants">
-        <h3>
-          {{ restaurant.name }}
-        </h3>
-        <section
-          v-if="restaurant.descriptionHtml"
-          v-html="restaurant.descriptionHtml"
-        ></section>
-      </li>
-    </ul>
+    <h1>Home page</h1>
+    <NuxtLink to="/vi/restaurants">Navigate to restaurants</NuxtLink>
   </article>
 </template>
 
-<script setup lang="ts">
-const presenter = useRestaurantsPresenter();
-
-await presenter.loadRestaurants();
-
-const viewModel = await presenter.getViewModel();
-</script>
+<script setup lang="ts"></script>
