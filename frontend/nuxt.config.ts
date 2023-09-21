@@ -13,12 +13,12 @@ export default defineNuxtConfig({
       isr: true,
     },
   },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      failOnError: false,
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     failOnError: false,
+  //   },
+  // },
   modules: ["nuxt-vitest"],
   devtools: { enabled: false },
 });
