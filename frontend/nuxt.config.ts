@@ -20,5 +20,5 @@ export default defineNuxtConfig({
     },
   },
   modules: ["nuxt-vitest"],
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 });
