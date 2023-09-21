@@ -5,6 +5,14 @@ export default defineNuxtConfig({
       applicationServerUrl: process.env.APPLICATION_SERVER_URL,
     },
   },
+  routeRules: {
+    "/": {
+      ssr: true,
+    },
+    "/[lang]/**": {
+      swr: true,
+    },
+  },
   modules: ["nuxt-vitest"],
   devtools: { enabled: true },
 });
