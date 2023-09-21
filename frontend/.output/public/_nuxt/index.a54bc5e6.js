@@ -1,0 +1,1 @@
+import{_ as t}from"./nuxt-link.540a709c.js";import{_ as a,c as o,b as n,w as s,a as c,o as r,d as _}from"./entry.80d8908f.js";const i={},d=c("h1",null,"Home page",-1);function l(u,m){const e=t;return r(),o("article",null,[d,n(e,{to:"/vi/restaurants"},{default:s(()=>[_("Navigate to restaurants")]),_:1})])}const x=a(i,[["render",l]]);export{x as default};

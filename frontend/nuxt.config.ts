@@ -7,10 +7,10 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/": {
-      ssr: true,
+      isr: true,
     },
     "/[lang]/**": {
-      swr: true,
+      isr: true,
     },
   },
   nitro: {
