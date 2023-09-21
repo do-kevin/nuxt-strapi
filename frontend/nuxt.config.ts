@@ -13,6 +13,12 @@ export default defineNuxtConfig({
       swr: true,
     },
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    },
+  },
   modules: ["nuxt-vitest"],
   devtools: { enabled: true },
 });

@@ -13,5 +13,7 @@ export const useConfig = () => {
     config.applicationServerUrl = runtimeConfig.public.applicationServerUrl;
   }
 
+  console.log("SERVER: ", config.applicationServerUrl);
+
   return config;
 };
