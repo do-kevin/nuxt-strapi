@@ -6,6 +6,7 @@ export const useRestaurantsPresenter = () => {
 
   const viewModel = {
     restaurants: [],
+    data: [],
   };
 
   async function loadRestaurants() {
@@ -44,6 +45,8 @@ export const useRestaurantsPresenter = () => {
         descriptionHtml: await transformMarkdownToHtml(r.descriptionMarkdown),
       });
     }
+
+    viewModel.data = restaurantsRepository.tablePm.value.data;
 
     return viewModel;
   }

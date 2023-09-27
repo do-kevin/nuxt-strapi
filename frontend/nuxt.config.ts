@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       applicationServerUrl: process.env.APPLICATION_SERVER_URL,
     },
   },
+  postcss: {},
   routeRules: {
     "/": {
       isr: true,
