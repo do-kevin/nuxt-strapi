@@ -1,6 +1,9 @@
 <template>
   <article>
     <h1>Restaurants</h1>
+    <p>
+      {{ viewModel.data }}
+    </p>
     <ul>
       <li v-for="restaurant in viewModel.restaurants">
         <h3>

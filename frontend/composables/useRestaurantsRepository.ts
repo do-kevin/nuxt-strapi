@@ -7,6 +7,12 @@ export const useRestaurantsRepository = () => {
     };
   });
 
+  const tablePm = useState("tablePm", () => {
+    return {
+      data: [],
+    };
+  });
+
   async function getRestaurants() {
     const restaurantsDto = await httpGateway.get("/api/restaurants", {});
     console.log("TEST: ", restaurantsDto.data);
@@ -29,8 +35,21 @@ export const useRestaurantsRepository = () => {
     };
   }
 
+  const test = async () => {
+    const { data } = await httpGateway.test(
+      "https://texpress-api-arfum7vf6a-wl.a.run.app/api/taxable_items",
+      {}
+    );
+
+    tablePm.value = {
+      data: data.value,
+    };
+  };
+
   return {
     getRestaurants,
     restaurantsPm,
+    test,
+    tablePm,
   };
 };
